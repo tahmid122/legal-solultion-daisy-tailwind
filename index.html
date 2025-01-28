@@ -16,6 +16,11 @@
       rel="stylesheet"
       type="text/css"
     />
+    <!-- font-awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/09153a20ac.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- tailwind and DaisyUI -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -25,6 +30,10 @@
       .poppins {
         font-family: "Poppins", serif;
       }
+      .bannerImage {
+        background: radial-gradient(circle, #11111100, #1111112a),
+          url("./images/banner.png");
+      }
     </style>
     <script>
       tailwind.config = {
@@ -32,6 +41,13 @@
           extend: {
             colors: {
               clifford: "#da373d",
+              dark3: "#707070",
+              dark6: "#E7E7E7",
+              "main-bg": "#B68C5A",
+            },
+            backgroundImage: {
+              banner: "url('./images/banner.png')",
+              background: "linear-gradient(to right, #1111112, #111111)",
             },
           },
         },
@@ -39,10 +55,119 @@
     </script>
   </head>
   <body class="poppins">
-    <header></header>
-    <main>
-      <h1>Welcome</h1>
+    <!-- header section -->
+    <header class="max-w-[1160px] mx-auto p-5 lg:p-7">
+      <nav>
+        <div class="navbar bg-base-100 p-0">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn btn-ghost lg:hidden pl-0 hover:bg-inherit"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-base text-dark3"
+              >
+                <li><a>Home</a></li>
+                <li>
+                  <a>Services <i class="fa-solid fa-chevron-right"></i></a>
+                </li>
+                <li>
+                  <a>Cases <i class="fa-solid fa-chevron-right"></i></a>
+                </li>
+                <li>
+                  <a>Blog <i class="fa-solid fa-chevron-right"></i></a>
+                </li>
+                <li>
+                  <a>Contact US <i class="fa-solid fa-chevron-right"></i></a>
+                </li>
+              </ul>
+            </div>
+            <a class="hidden md:flex">
+              <img
+                class="object-cover h-11 cursor-pointer"
+                src="./images/logo2.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li>
+                <a>Services <i class="fa-solid fa-chevron-right"></i></a>
+              </li>
+              <li>
+                <a>Cases <i class="fa-solid fa-chevron-right"></i></a>
+              </li>
+              <li>
+                <a>Blog <i class="fa-solid fa-chevron-right"></i></a>
+              </li>
+              <li>
+                <a>Contact Us <i class="fa-solid fa-chevron-right"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn text-lg font-medium text-white bg-main-bg hover:bg-main-bg hidden md:flex"
+              >Free Consultation</a
+            >
+            <img class="md:hidden h-11" src="./images/logo2.png" alt="" />
+          </div>
+        </div>
+      </nav>
+      <div
+        class="lg:h-[550px] text-white flex flex-col items-center justify-center text-center rounded-lg my-12 md:px-32 lg:px-52 space-y-6 relative overflow-hidden bg-gradient-to-r from-[#111111] to-red-[rgba(17, 17, 17, 0)] p-2 py-5"
+      >
+        <img
+          class="absolute w-full h-full object-cover -z-10"
+          src="./images/banner.png"
+          alt=""
+        />
+        <h1 class="text-5xl lg:text-7xl font-extrabold eb-garamond">
+          We Provide Effective Legal Solutions
+        </h1>
+        <p class="text-base dark6">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour.
+        </p>
+
+        <div class="flex-col md:flex-row flex w-full px-5 gap-4">
+          <input
+            type="text"
+            placeholder="Search Your Services"
+            class="input input-bordered w-full max-w-full text-black"
+          />
+          <button class="btn bg-main-bg text-white hover:bg-main-bg px-7">
+            Search
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1160px] mx-auto p-5 lg:p-7">
+      <h1>main website section</h1>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="max-w-[1160px] mx-auto p-5 lg:p-7"></div>
+    </footer>
   </body>
 </html>
