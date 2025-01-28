@@ -157,7 +157,9 @@
             placeholder="Search Your Services"
             class="input input-bordered w-full max-w-full text-black"
           />
-          <button class="btn bg-main-bg text-white hover:bg-main-bg px-7">
+          <button
+            class="btn bg-main-bg text-white hover:bg-main-bg px-7 border-none"
+          >
             Search
           </button>
         </div>
@@ -512,7 +514,7 @@
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div
-            class="grid grid-cols-1 lg:grid-cols-2 divide-x divide-y bg-[#F3F3F3]"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 divide-x divide-y bg-[#F3F3F3]"
           >
             <div class="px-12 py-14 text-center space-y-4">
               <img class="mx-auto" src="./images/address.png" alt="" />
@@ -522,7 +524,7 @@
               </p>
             </div>
             <div
-              class="px-12 py-14 text-center space-y-4 border-l-white lg:border-l-inherit"
+              class="px-12 py-14 text-center space-y-4 border-l-white md:border-l-inherit lg:border-l-inherit"
             >
               <img class="mx-auto" src="./images/call.png" alt="" />
               <h4 class="eb-garamond font-extrabold text-2xl">Call Us</h4>
@@ -540,7 +542,7 @@
               </p>
             </div>
             <div
-              class="px-12 py-14 text-center space-y-4 border-l-white lg:border-l-inherit"
+              class="px-12 py-14 text-center space-y-4 border-l-white md:border-l-inherit lg:border-l-inherit"
             >
               <img class="mx-auto" src="./images/email.png" alt="" />
               <h4 class="eb-garamond font-extrabold text-2xl">Working Hours</h4>
@@ -578,8 +580,58 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="max-w-[1160px] mx-auto p-5 lg:p-7"></div>
+    <footer class="bg-black">
+      <div class="max-w-[1160px] mx-auto p-5 lg:p-7">
+        <div
+          class="footer text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 lg:py-28 lg:justify-items-center"
+        >
+          <nav>
+            <div>
+              <img src="./images/logo.png" alt="" />
+            </div>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+          </nav>
+          <nav>
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+          </nav>
+          <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+          </nav>
+
+          <form class="text-white lg:col-span-2">
+            <h6 class="footer-title">Newsletter</h6>
+            <p class="text-[14px]">
+              Subscribe for our latest & Articles. <br />
+              We Wont Give You Spam Mails
+            </p>
+            <fieldset class="form-control">
+              <div class="join w-full bg-red-500">
+                <input
+                  type="text"
+                  placeholder="Your Email"
+                  class="input input-bordered join-item focus:outline-none text-black"
+                />
+                <button
+                  class="btn bg-main-bg hover:bg-main-bg text-white border-none join-item"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
